@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GymFresh - Beginner's Gym Guide</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">
+      <span class="logo-icon">💪</span>
+      <span>GymFresh</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#plans">Workout Plans</a></li>
+      <li><a href="#exercises">Exercises</a></li>
+      <li><a href="#tracker">Tracker</a></li>
+      <li><a href="#bmi">BMI</a></li>
+      <li><a href="#tips">Tips</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#plans">Workout Plans</a>
+    <a href="#exercises">Exercises</a>
+    <a href="#tracker">Tracker</a>
+    <a href="#bmi">BMI</a>
+    <a href="#tips">Tips</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>Welcome to <span class="highlight">GymFresh</span></h1>
+      <p>Your complete beginner's guide to building strength, confidence, and a healthy body.</p>
+      <div class="hero-btns">
+        <a href="#plans" class="btn btn-primary">Start Your Journey</a>
+        <a href="#bmi" class="btn btn-outline">Check Your BMI</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <span class="stat-number">12</span>
+        <span class="stat-label">Week Program</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">30+</span>
+        <span class="stat-label">Exercises</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-number">3x</span>
+        <span class="stat-label">Per Week</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKOUT PLANS -->
+  <section class="section" id="plans">
+    <div class="container">
+      <h2 class="section-title">Beginner <span class="highlight">Workout Plans</span></h2>
+      <p class="section-subtitle">Choose a plan that fits your schedule. All plans are designed for gym freshers.</p>
+
+      <div class="tabs">
+        <button class="tab active" data-tab="fullbody">Full Body (3x/week)</button>
+        <button class="tab" data-tab="ppl">Push Pull Legs</button>
+        <button class="tab" data-tab="upper-lower">Upper/Lower Split</button>
+      </div>
+
+      <!-- Full Body -->
+      <div class="tab-content active" id="fullbody">
+        <div class="plan-grid">
+          <div class="plan-day">
+            <h3>Day 1 - Monday</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Barbell Squat</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Bench Press</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Bent-Over Row</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Overhead Press</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Plank</span><span class="ex-sets">3 x 30s</span></li>
+            </ul>
+          </div>
+          <div class="plan-day rest">
+            <h3>Day 2 - Tuesday</h3>
+            <div class="rest-day">
+              <span class="rest-icon">😴</span>
+              <p>Rest Day</p>
+              <small>Light walking or stretching</small>
+            </div>
+          </div>
+          <div class="plan-day">
+            <h3>Day 3 - Wednesday</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Deadlift</span><span class="ex-sets">3 x 6</span></li>
+              <li><span class="ex-name">Incline Dumbbell Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Pull-Up / Lat Pulldown</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Dumbbell Curl</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Tricep Pushdown</span><span class="ex-sets">3 x 12</span></li>
+            </ul>
+          </div>
+          <div class="plan-day rest">
+            <h3>Day 4 - Thursday</h3>
+            <div class="rest-day">
+              <span class="rest-icon">😴</span>
+              <p>Rest Day</p>
+              <small>Light walking or stretching</small>
+            </div>
+          </div>
+          <div class="plan-day">
+            <h3>Day 5 - Friday</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Leg Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Dumbbell Shoulder Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Cable Row</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Leg Curl</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Calf Raise</span><span class="ex-sets">3 x 15</span></li>
+            </ul>
+          </div>
+          <div class="plan-day rest">
+            <h3>Sat–Sun</h3>
+            <div class="rest-day">
+              <span class="rest-icon">🏃</span>
+              <p>Active Rest</p>
+              <small>Walk, swim, or light cardio</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PPL -->
+      <div class="tab-content" id="ppl">
+        <div class="plan-grid">
+          <div class="plan-day">
+            <h3>Push - Chest, Shoulders, Triceps</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Bench Press</span><span class="ex-sets">4 x 8</span></li>
+              <li><span class="ex-name">Overhead Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Incline DB Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Lateral Raise</span><span class="ex-sets">3 x 15</span></li>
+              <li><span class="ex-name">Tricep Dips / Pushdown</span><span class="ex-sets">3 x 12</span></li>
+            </ul>
+          </div>
+          <div class="plan-day">
+            <h3>Pull - Back, Biceps</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Deadlift</span><span class="ex-sets">3 x 5</span></li>
+              <li><span class="ex-name">Pull-Up / Lat Pulldown</span><span class="ex-sets">4 x 8</span></li>
+              <li><span class="ex-name">Cable Row</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Face Pull</span><span class="ex-sets">3 x 15</span></li>
+              <li><span class="ex-name">Barbell Curl</span><span class="ex-sets">3 x 12</span></li>
+            </ul>
+          </div>
+          <div class="plan-day">
+            <h3>Legs - Quads, Hamstrings, Glutes</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Barbell Squat</span><span class="ex-sets">4 x 8</span></li>
+              <li><span class="ex-name">Romanian Deadlift</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Leg Press</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Walking Lunge</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Calf Raise</span><span class="ex-sets">4 x 15</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Upper Lower -->
+      <div class="tab-content" id="upper-lower">
+        <div class="plan-grid">
+          <div class="plan-day">
+            <h3>Upper A (Mon)</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Bench Press</span><span class="ex-sets">4 x 6</span></li>
+              <li><span class="ex-name">Bent-Over Row</span><span class="ex-sets">4 x 6</span></li>
+              <li><span class="ex-name">Overhead Press</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Lat Pulldown</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Tricep Extension</span><span class="ex-sets">3 x 10</span></li>
+            </ul>
+          </div>
+          <div class="plan-day">
+            <h3>Lower A (Tue)</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Squat</span><span class="ex-sets">4 x 6</span></li>
+              <li><span class="ex-name">Romanian Deadlift</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Leg Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Leg Curl</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Calf Raise</span><span class="ex-sets">4 x 15</span></li>
+            </ul>
+          </div>
+          <div class="plan-day">
+            <h3>Upper B (Thu)</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Incline DB Press</span><span class="ex-sets">4 x 8</span></li>
+              <li><span class="ex-name">Pull-Up</span><span class="ex-sets">4 x 6</span></li>
+              <li><span class="ex-name">DB Shoulder Press</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Cable Row</span><span class="ex-sets">3 x 10</span></li>
+              <li><span class="ex-name">Barbell Curl</span><span class="ex-sets">3 x 10</span></li>
+            </ul>
+          </div>
+          <div class="plan-day">
+            <h3>Lower B (Fri)</h3>
+            <ul class="exercise-list">
+              <li><span class="ex-name">Deadlift</span><span class="ex-sets">4 x 5</span></li>
+              <li><span class="ex-name">Front Squat / Goblet Squat</span><span class="ex-sets">3 x 8</span></li>
+              <li><span class="ex-name">Walking Lunge</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Glute Bridge</span><span class="ex-sets">3 x 12</span></li>
+              <li><span class="ex-name">Seated Calf Raise</span><span class="ex-sets">4 x 15</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXERCISES -->
+  <section class="section dark" id="exercises">
+    <div class="container">
+      <h2 class="section-title">Exercise <span class="highlight">Library</span></h2>
+      <p class="section-subtitle">Click any exercise to see instructions and muscles worked.</p>
+
+      <div class="search-bar">
+        <input type="text" id="exerciseSearch" placeholder="Search exercises..." />
+      </div>
+
+      <div class="exercise-grid" id="exerciseGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- TRACKER -->
+  <section class="section" id="tracker">
+    <div class="container">
+      <h2 class="section-title">Workout <span class="highlight">Tracker</span></h2>
+      <p class="section-subtitle">Log your sets and weight. Data is saved in your browser.</p>
+
+      <div class="tracker-layout">
+        <div class="tracker-form card">
+          <h3>Log a Set</h3>
+          <div class="form-group">
+            <label>Exercise</label>
+            <input type="text" id="logExercise" placeholder="e.g. Bench Press" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Sets</label>
+              <input type="number" id="logSets" placeholder="3" min="1" max="20" />
+            </div>
+            <div class="form-group">
+              <label>Reps</label>
+              <input type="number" id="logReps" placeholder="8" min="1" max="50" />
+            </div>
+            <div class="form-group">
+              <label>Weight (kg)</label>
+              <input type="number" id="logWeight" placeholder="60" min="0" step="2.5" />
+            </div>
+          </div>
+          <button class="btn btn-primary full-width" id="logBtn">+ Add to Log</button>
+        </div>
+
+        <div class="tracker-log card">
+          <div class="log-header">
+            <h3>Today's Log</h3>
+            <button class="btn-sm btn-danger" id="clearLog">Clear All</button>
+          </div>
+          <div id="logEntries">
+            <p class="empty-state">No exercises logged yet. Add one above!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BMI CALCULATOR -->
+  <section class="section dark" id="bmi">
+    <div class="container">
+      <h2 class="section-title">BMI <span class="highlight">Calculator</span></h2>
+      <p class="section-subtitle">Know your starting point. Track your progress.</p>
+
+      <div class="bmi-layout">
+        <div class="bmi-form card">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Height (cm)</label>
+              <input type="number" id="bmiHeight" placeholder="175" min="100" max="250" />
+            </div>
+            <div class="form-group">
+              <label>Weight (kg)</label>
+              <input type="number" id="bmiWeight" placeholder="70" min="30" max="300" />
+            </div>
+            <div class="form-group">
+              <label>Age</label>
+              <input type="number" id="bmiAge" placeholder="20" min="10" max="100" />
+            </div>
+          </div>
+          <div class="gender-select">
+            <label>Gender</label>
+            <div class="gender-btns">
+              <button class="gender-btn active" data-gender="male">Male</button>
+              <button class="gender-btn" data-gender="female">Female</button>
+            </div>
+          </div>
+          <button class="btn btn-primary full-width" id="calcBmi">Calculate BMI</button>
+        </div>
+
+        <div class="bmi-result card" id="bmiResult" style="display:none">
+          <div class="bmi-score" id="bmiScore">--</div>
+          <div class="bmi-category" id="bmiCategory">--</div>
+          <div class="bmi-gauge">
+            <div class="gauge-bar">
+              <div class="gauge-fill" id="gaugeFill"></div>
+              <div class="gauge-marker" id="gaugeMarker"></div>
+            </div>
+            <div class="gauge-labels">
+              <span>Underweight</span>
+              <span>Normal</span>
+              <span>Overweight</span>
+              <span>Obese</span>
+            </div>
+          </div>
+          <div class="bmi-advice" id="bmiAdvice"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUTRITION TIPS -->
+  <section class="section" id="tips">
+    <div class="container">
+      <h2 class="section-title">Gym Fresher <span class="highlight">Tips</span></h2>
+      <p class="section-subtitle">Essential knowledge for beginners that most people wish they knew earlier.</p>
+
+      <div class="tips-grid">
+        <div class="tip-card">
+          <div class="tip-icon">🥩</div>
+          <h3>Protein is King</h3>
+          <p>Aim for <strong>1.6–2.2g of protein per kg</strong> of bodyweight daily. Chicken, eggs, fish, and lentils are great sources.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">💧</div>
+          <h3>Stay Hydrated</h3>
+          <p>Drink at least <strong>3–4 litres</strong> of water per day. Dehydration reduces strength by up to 10%.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">😴</div>
+          <h3>Sleep = Growth</h3>
+          <p>Muscles grow during sleep, not during workouts. Get <strong>7–9 hours</strong> every night for maximum gains.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📈</div>
+          <h3>Progressive Overload</h3>
+          <p>Add <strong>2.5kg every 1–2 weeks</strong> to your main lifts. Small increases compound into massive strength gains.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🧘</div>
+          <h3>Warm Up First</h3>
+          <p>Spend <strong>5–10 minutes</strong> warming up with light cardio and dynamic stretches to prevent injury.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🍽️</div>
+          <h3>Pre/Post Workout Meals</h3>
+          <p>Eat <strong>carbs + protein 1–2h before</strong> training. Have protein within <strong>30–60min after</strong> for best recovery.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">📋</div>
+          <h3>Track Everything</h3>
+          <p>Use the tracker above to log your lifts. Seeing progress on paper is the biggest motivation booster.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🎯</div>
+          <h3>Focus on Form First</h3>
+          <p>Never sacrifice form for weight. <strong>Perfect technique with lighter weights</strong> builds more muscle and prevents injury.</p>
+        </div>
+        <div class="tip-card">
+          <div class="tip-icon">🔁</div>
+          <h3>Stay Consistent</h3>
+          <p>Show up <strong>even on bad days</strong>. Consistency over 3–6 months beats any "perfect" program that you quit after 2 weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">💪</span>
+          <span class="footer-name">GymFresh</span>
+          <p>Built for beginner gym boys who are ready to transform.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <a href="#plans">Workout Plans</a>
+          <a href="#exercises">Exercises</a>
+          <a href="#tracker">Tracker</a>
+          <a href="#bmi">BMI</a>
+        </div>
+        <div class="footer-quote">
+          <blockquote>"The secret to getting ahead is getting started."</blockquote>
+          <cite>— Mark Twain</cite>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 GymFresh. Start fresh. Stay consistent. Get strong.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- EXERCISE MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="exerciseModal">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
