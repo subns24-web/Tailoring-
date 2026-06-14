@@ -1,10 +1,10 @@
-/* TailorPro – Mobile-first Android Optimized */
+/* Charakk Clothing Co. – Mobile-first Android Optimized */
 :root {
-  --primary:#1a1a2e; --primary-light:#16213e;
-  --accent:#c9a96e; --accent-light:#e8c99a; --accent-dark:#a67c45;
-  --surface:#fff; --surface-alt:#f8f5f0; --surface-card:#fff;
-  --border:#e8e0d5; --border-light:#f0ece6;
-  --text-primary:#1a1a2e; --text-secondary:#6b6058; --text-muted:#a09080;
+  --primary:#1a3d1a; --primary-light:#0f2a0f;
+  --accent:#c8b98a; --accent-light:#e0d4b0; --accent-dark:#a89a6a;
+  --surface:#fff; --surface-alt:#f5f7f5; --surface-card:#fff;
+  --border:#d8e4d8; --border-light:#e8f0e8;
+  --text-primary:#1a3d1a; --text-secondary:#4a6b4a; --text-muted:#7a9a7a;
   --success:#2ecc71; --warning:#f39c12; --danger:#e74c3c; --info:#3498db;
   --status-pending:#f39c12; --status-cutting:#9b59b6; --status-stitching:#3498db;
   --status-fitting:#1abc9c; --status-finishing:#e67e22; --status-ready:#2ecc71;
