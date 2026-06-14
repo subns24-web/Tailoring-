@@ -1,4 +1,4 @@
-/* TailorPro – Full SPA */
+/* Charakk Clothing Co. – Full SPA */
 'use strict';
 
 // ── Data Layer ────────────────────────────────────────────
@@ -28,23 +28,24 @@ function seedDemo() {
   ]);
   const o1 = uid(), o2 = uid(), o3 = uid();
   DB.set('orders', [
-    { id: o1, orderNo: 'TP-001', customerId: c1, customerName: 'Arjun Sharma', items: [{ type: 'Suit', fabric: 'Navy Wool', qty: 1, price: 8500 }, { type: 'Shirt', fabric: 'White Cotton', qty: 2, price: 1200 }], status: 'stitching', deadline: '2026-06-15', advance: 5000, totalAmount: 10900, notes: 'Wedding occasion', createdAt: '2026-06-01' },
-    { id: o2, orderNo: 'TP-002', customerId: c2, customerName: 'Priya Mehta', items: [{ type: 'Salwar Suit', fabric: 'Pink Chiffon', qty: 1, price: 4500 }], status: 'ready', deadline: '2026-06-10', advance: 2000, totalAmount: 4500, notes: '', createdAt: '2026-06-03' },
-    { id: o3, orderNo: 'TP-003', customerId: c3, customerName: 'Rahul Verma', items: [{ type: 'Pant', fabric: 'Grey Blend', qty: 2, price: 1800 }], status: 'pending', deadline: '2026-06-20', advance: 1000, totalAmount: 3600, notes: 'Formal trousers', createdAt: '2026-06-05' },
+    { id: o1, orderNo: 'CK-001', customerId: c1, customerName: 'Arjun Sharma', items: [{ type: 'Uniform', fabric: 'Olive Green Twill', qty: 5, price: 1800 }, { type: 'Workwear Jacket', fabric: 'Dark Grey Canvas', qty: 2, price: 2500 }], status: 'stitching', deadline: '2026-06-15', advance: 10000, totalAmount: 14000, notes: 'Corporate bulk order', createdAt: '2026-06-01' },
+    { id: o2, orderNo: 'CK-002', customerId: c2, customerName: 'Priya Mehta', items: [{ type: 'Hospitality Wear', fabric: 'Black Poly-Cotton', qty: 10, price: 1200 }], status: 'ready', deadline: '2026-06-10', advance: 6000, totalAmount: 12000, notes: 'Hotel staff uniforms', createdAt: '2026-06-03' },
+    { id: o3, orderNo: 'CK-003', customerId: c3, customerName: 'Rahul Verma', items: [{ type: 'Scrubs', fabric: 'Ceil Blue Cotton', qty: 8, price: 950 }], status: 'pending', deadline: '2026-06-20', advance: 3000, totalAmount: 7600, notes: 'Clinic staff order', createdAt: '2026-06-05' },
   ]);
   DB.set('appointments', [
-    { id: uid(), customerId: c1, customerName: 'Arjun Sharma', date: today(), time: '10:00', type: 'Fitting', status: 'scheduled', notes: 'Final fitting for suit' },
-    { id: uid(), customerId: c2, customerName: 'Priya Mehta', date: today(), time: '14:30', type: 'Delivery', status: 'scheduled', notes: '' },
-    { id: uid(), customerId: c3, customerName: 'Rahul Verma', date: new Date(Date.now() + 86400000).toISOString().slice(0,10), time: '11:00', type: 'Measurement', status: 'scheduled', notes: 'First visit' },
+    { id: uid(), customerId: c1, customerName: 'Arjun Sharma', date: today(), time: '10:00', type: 'Fitting', status: 'scheduled', notes: 'Uniform fitting – corporate team' },
+    { id: uid(), customerId: c2, customerName: 'Priya Mehta', date: today(), time: '14:30', type: 'Delivery', status: 'scheduled', notes: 'Hotel uniforms delivery' },
+    { id: uid(), customerId: c3, customerName: 'Rahul Verma', date: new Date(Date.now() + 86400000).toISOString().slice(0,10), time: '11:00', type: 'Measurement', status: 'scheduled', notes: 'Clinic staff sizing' },
   ]);
   DB.set('fabrics', [
-    { id: uid(), name: 'Navy Premium Wool', type: 'Wool', color: '#1a2a5e', pattern: 'Solid', pricePerMeter: 850, stock: 12 },
-    { id: uid(), name: 'White Cotton Poplin', type: 'Cotton', color: '#f5f5f5', pattern: 'Solid', pricePerMeter: 280, stock: 25 },
-    { id: uid(), name: 'Pink Chiffon', type: 'Chiffon', color: '#ffb3c6', pattern: 'Solid', pricePerMeter: 420, stock: 3 },
-    { id: uid(), name: 'Charcoal Linen', type: 'Linen', color: '#4a4a4a', pattern: 'Solid', pricePerMeter: 560, stock: 8 },
-    { id: uid(), name: 'Floral Georgette', type: 'Georgette', color: '#ff6b6b', pattern: 'Floral', pricePerMeter: 390, stock: 15 },
+    { id: uid(), name: 'Olive Green Twill', type: 'Twill', color: '#4a5a2e', pattern: 'Solid', pricePerMeter: 380, stock: 45 },
+    { id: uid(), name: 'Black Poly-Cotton', type: 'Poly-Cotton', color: '#1a1a1a', pattern: 'Solid', pricePerMeter: 220, stock: 80 },
+    { id: uid(), name: 'Ceil Blue Cotton', type: 'Cotton', color: '#8ab4c8', pattern: 'Solid', pricePerMeter: 260, stock: 60 },
+    { id: uid(), name: 'Charcoal Grey Canvas', type: 'Canvas', color: '#3a3a3a', pattern: 'Solid', pricePerMeter: 420, stock: 30 },
+    { id: uid(), name: 'Navy Blue Ripstop', type: 'Ripstop', color: '#1a2a4a', pattern: 'Solid', pricePerMeter: 480, stock: 25 },
+    { id: uid(), name: 'Forest Green Drill', type: 'Drill', color: '#1a3d1a', pattern: 'Solid', pricePerMeter: 350, stock: 50 },
   ]);
-  DB.setObj('settings', { shopName: 'TailorPro Studio', ownerName: 'Owner', phone: '9999999999', address: '1 Fashion Street, City', currency: '₹', gst: '18', nextOrderNo: 4, prices: { Shirt: 1200, Pant: 1800, Suit: 8500, Kurta: 1500, 'Salwar Suit': 4500, Blouse: 800, Dress: 3500, Coat: 5000, Sherwani: 12000, Lehenga: 15000 } });
+  DB.setObj('settings', { shopName: 'Charakk Clothing Co.', ownerName: 'Owner', phone: '9999999999', address: 'Charakk HQ, City', currency: '₹', gst: '18', nextOrderNo: 4, prices: { Uniform: 1800, Workwear: 2200, 'Hospitality Wear': 1200, Apron: 650, Scrubs: 950, 'Safety Vest': 750, 'Workwear Jacket': 2500, 'Chef Coat': 1100, 'Lab Coat': 1050, 'Cargo Pants': 1400 } });
 }
 
 // ── Router ────────────────────────────────────────────────
@@ -881,7 +882,7 @@ function renderOrderForm(id, params = {}) {
   const settings = DB.getObj('settings', { prices: {} });
   document.getElementById('page-title').textContent = o ? 'Edit Order' : 'New Order';
 
-  const garmentTypes = ['Shirt', 'Pant', 'Suit', 'Kurta', 'Salwar Suit', 'Blouse', 'Dress', 'Coat', 'Sherwani', 'Lehenga', 'Jacket', 'Waistcoat', 'Other'];
+  const garmentTypes = ['Uniform', 'Workwear', 'Hospitality Wear', 'Apron', 'Scrubs', 'Safety Vest', 'Workwear Jacket', 'Chef Coat', 'Lab Coat', 'Cargo Pants', 'Polo Shirt', 'T-Shirt', 'Other'];
   const customers = DB.get('customers');
 
   const items = o?.items || [{ type: 'Shirt', fabric: '', qty: 1, price: settings.prices?.Shirt || 1200 }];
@@ -1035,7 +1036,7 @@ window.saveOrder = (id) => {
     toast('Order updated', 'success');
     navigate('order-detail', { id });
   } else {
-    const newO = { id: uid(), orderNo: 'TP-' + String(settings.nextOrderNo || 1).padStart(3, '0'), customerId, customerName, items, status: 'pending', deadline, totalAmount: total, advance: parseFloat(document.getElementById('of-advance').value) || 0, notes: document.getElementById('of-notes').value.trim(), createdAt: today() };
+    const newO = { id: uid(), orderNo: 'CK-' + String(settings.nextOrderNo || 1).padStart(3, '0'), customerId, customerName, items, status: 'pending', deadline, totalAmount: total, advance: parseFloat(document.getElementById('of-advance').value) || 0, notes: document.getElementById('of-notes').value.trim(), createdAt: today() };
     list.push(newO);
     DB.set('orders', list);
     settings.nextOrderNo = (settings.nextOrderNo || 1) + 1;
@@ -1576,7 +1577,7 @@ register('more', () => {
             </div>
           </div>
         </div>`).join('')}
-      <div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px">TailorPro v1.0 · Made with ❤️ for tailors</div>
+      <div style="text-align:center;padding:16px;color:var(--text-muted);font-size:12px">Charakk Clothing Co. · Workwear & Uniforms Specialists</div>
     </div>`;
   const fab = document.querySelector('.fab');
   if (fab) fab.remove();
