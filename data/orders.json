@@ -1,0 +1,140 @@
+{
+  "store": {
+    "name": "Subha's Tailoring & Boutique",
+    "currency": "INR",
+    "support_email": "support@subhastailoring.example",
+    "support_phone": "+91 98765 43210"
+  },
+  "orders": [
+    {
+      "order_id": "ORD-1001",
+      "customer": {
+        "name": "Subha N",
+        "email": "subns24@gmail.com",
+        "phone": "+91 90000 11111"
+      },
+      "items": [
+        {
+          "sku": "KURTA-CUSTOM-01",
+          "name": "Custom Stitched Kurta (Cotton, Navy Blue)",
+          "quantity": 1,
+          "price": 1499,
+          "measurements": { "chest": 40, "waist": 34, "length": 42, "sleeve": 24 }
+        }
+      ],
+      "total": 1499,
+      "status": "out_for_delivery",
+      "payment": { "method": "UPI", "status": "paid" },
+      "placed_at": "2026-07-10T10:24:00+05:30",
+      "estimated_delivery": "2026-07-18",
+      "tracking": {
+        "carrier": "Delhivery",
+        "tracking_number": "DL987654321IN",
+        "last_update": "2026-07-17T08:15:00+05:30",
+        "current_location": "Chennai Hub - Out for delivery"
+      },
+      "history": [
+        { "at": "2026-07-10T10:24:00+05:30", "event": "Order placed" },
+        { "at": "2026-07-11T09:00:00+05:30", "event": "Measurements confirmed, stitching started" },
+        { "at": "2026-07-14T17:30:00+05:30", "event": "Stitching completed, quality check passed" },
+        { "at": "2026-07-15T11:00:00+05:30", "event": "Shipped via Delhivery" },
+        { "at": "2026-07-17T08:15:00+05:30", "event": "Out for delivery" }
+      ]
+    },
+    {
+      "order_id": "ORD-1002",
+      "customer": {
+        "name": "Subha N",
+        "email": "subns24@gmail.com",
+        "phone": "+91 90000 11111"
+      },
+      "items": [
+        {
+          "sku": "BLOUSE-DESIGNER-07",
+          "name": "Designer Saree Blouse (Silk, Maroon, Aari Work)",
+          "quantity": 2,
+          "price": 2199
+        }
+      ],
+      "total": 4398,
+      "status": "in_production",
+      "payment": { "method": "Card", "status": "paid" },
+      "placed_at": "2026-07-14T18:45:00+05:30",
+      "estimated_delivery": "2026-07-24",
+      "tracking": null,
+      "history": [
+        { "at": "2026-07-14T18:45:00+05:30", "event": "Order placed" },
+        { "at": "2026-07-15T10:00:00+05:30", "event": "Fabric sourced, Aari work started" }
+      ]
+    },
+    {
+      "order_id": "ORD-1003",
+      "customer": {
+        "name": "Subha N",
+        "email": "subns24@gmail.com",
+        "phone": "+91 90000 11111"
+      },
+      "items": [
+        {
+          "sku": "SHIRT-FORMAL-12",
+          "name": "Formal Shirt (Linen, White)",
+          "quantity": 3,
+          "price": 999
+        },
+        {
+          "sku": "PANT-FORMAL-05",
+          "name": "Formal Trousers (Poly-Viscose, Charcoal)",
+          "quantity": 2,
+          "price": 1299
+        }
+      ],
+      "total": 5595,
+      "status": "delivered",
+      "payment": { "method": "Cash on Delivery", "status": "paid" },
+      "placed_at": "2026-06-20T14:10:00+05:30",
+      "estimated_delivery": "2026-06-30",
+      "delivered_at": "2026-06-29T16:40:00+05:30",
+      "tracking": {
+        "carrier": "Blue Dart",
+        "tracking_number": "BD123456789IN",
+        "last_update": "2026-06-29T16:40:00+05:30",
+        "current_location": "Delivered - signed by customer"
+      },
+      "history": [
+        { "at": "2026-06-20T14:10:00+05:30", "event": "Order placed" },
+        { "at": "2026-06-24T12:00:00+05:30", "event": "Stitching completed" },
+        { "at": "2026-06-26T09:30:00+05:30", "event": "Shipped via Blue Dart" },
+        { "at": "2026-06-29T16:40:00+05:30", "event": "Delivered" }
+      ]
+    },
+    {
+      "order_id": "ORD-1004",
+      "customer": {
+        "name": "Subha N",
+        "email": "subns24@gmail.com",
+        "phone": "+91 90000 11111"
+      },
+      "items": [
+        {
+          "sku": "LEHENGA-BRIDAL-02",
+          "name": "Bridal Lehenga (Velvet, Deep Red, Zardozi)",
+          "quantity": 1,
+          "price": 18999
+        }
+      ],
+      "total": 18999,
+      "status": "cancelled",
+      "payment": { "method": "Card", "status": "refunded" },
+      "placed_at": "2026-07-01T20:05:00+05:30",
+      "cancelled_at": "2026-07-03T11:20:00+05:30",
+      "cancellation_reason": "Customer requested cancellation before production started",
+      "refund": { "amount": 18999, "status": "completed", "refunded_at": "2026-07-06T10:00:00+05:30" },
+      "tracking": null,
+      "history": [
+        { "at": "2026-07-01T20:05:00+05:30", "event": "Order placed" },
+        { "at": "2026-07-03T11:20:00+05:30", "event": "Order cancelled by customer" },
+        { "at": "2026-07-06T10:00:00+05:30", "event": "Refund of ₹18,999 completed" }
+      ]
+    }
+  ]
+}
